@@ -1,7 +1,7 @@
 <?php
 header("content-type:text/html;charset=utf-8");
 /**
- * 两栈共享空间的基本操作
+ * 栈的链式存储结构的基本操作
  *
  *包括
  * 1.初始化 __contruct()
@@ -67,6 +67,21 @@ class Node_stack{
         }
         $this->top=null;
         $this->count=0;
+    }
+    //遍历栈
+    public function stackTraverse(){
+        if($this->top ==null){
+            echo "栈已空";
+            return false;
+        }else{
+            $array = array();
+            $p=$this->top;
+            while ($p){
+                array_push($array,$p->data);
+                $p = $p->next;
+            }
+            return $array;
+        }
     }
 }
 ?>

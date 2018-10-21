@@ -12,6 +12,12 @@ $node_stack->push(5);
 print_r($node_stack);
 echo "</br>";
 echo "</br>";
+echo "遍历栈：";
+echo "</br>";
+$stack_array = $node_stack->stackTraverse();
+print_r($stack_array);
+echo "</br>";
+echo "</br>";
 echo "出栈操作：";
 echo "</br>";
 $value = $node_stack->pop();
@@ -28,5 +34,7 @@ $node_stack->pop();
 $node_stack->pop();
 echo "</br>";
 print_r($node_stack);
+echo "</br>";
+echo "</br>";
 
 ?>
