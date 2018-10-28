@@ -1,15 +1,15 @@
 <?php
 header("content-type:text/html;charset=utf-8");
+/**
+ * 队列的链式存储结构的基本操作
+ *
+ *包括
+ * 1.初始化 __contruct()
+ * 2.入队操作 insertQueue($elem)
+ * 3.出对操作 deleteQueue()
+ * 4.遍历队列 stackTraverse()
+ */
 class Node{
-    /**
-     * 队列的链式存储结构的基本操作
-     *
-     *包括
-     * 1.初始化 __contruct()
-     * 2.入队操作 insertQueue($elem)
-     * 3.出对操作 deleteQueue()
-     * 4.遍历队列 stackTraverse()
-     */
     public $data;
     public $next;
     public function __construct()
