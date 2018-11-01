@@ -96,6 +96,27 @@ class Binary_tree{
         return $temp;
     }
 
+    function PrintFromTopToBottom(&$root)
+    {
+        if($root == null){
+            return '';
+        }
+        $queue = array();
+        array_push($queue,$root);//进队
+
+        while(!is_null($node = array_shift($queue))){//出队，直至为空
+            echo $node->data . '';
+            if($node->left != null){
+                array_push($queue,$node->lchild);
+
+            }
+            if($node->left != null){
+                array_push($queue,$node->rchild);
+            }
+        }
+    }
+
+
 }
 
 ?>
